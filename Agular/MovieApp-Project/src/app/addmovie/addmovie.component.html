@@ -1,0 +1,45 @@
+<p>addmovie works!</p>
+<ng-container *ngIf="movies.length !=0">
+    <div class="container mt-5">
+        <div class="text-center">
+            <div class="addmovie-movie">
+                <table>
+                    <tbody>
+                        <tr *ngFor="let item of movies,let i=index">
+                            <div class="card text-center p-5">
+                                <td><img style="width: 100%" src="/assets/{{item.movieImage}}"></td>
+                                <div class="card-title">
+
+                                    <button class="btn btn-success check" routerLink="/address">Confirm Booking</button>
+                                    <button class="btn   btn-danger  check delete"
+                                        (click)="removeItem(item)">DELETE</button>
+                                </div>
+                            </div>
+
+
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="movies.length ==0">
+
+    <div class="container mt-3">
+        <div class="card">
+            <h5 class="card-title  pb-1 mt-5 text-center my_acc">My Account</h5>
+        </div>
+        <div class="center  account">
+            <img src="../../assets/3.jpeg" alt="">
+            <h4>Empty Account!</h4>
+            <h6>Add Movie Now</h6>
+            <button routerLink="/payment" class="btn book2">Book Now</button>
+        </div>
+    </div>
+</ng-container>

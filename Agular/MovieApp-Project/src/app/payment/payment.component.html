@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="movies">Recommended Movies</h1>
+    <div class="row">
+        <ng-container *ngFor="let movie of movies">
+            <div class="card style_card col-md-4 top p-3 " style="width: 18rem;">
+                <img src="../../assets/{{movie.movieImage}}" alt="" style="height: 300px; width:80%">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{movie.movieName}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{movie.movieDescription}}</p>
+               
+                <button class="btn book" (click)=addtoaddmovie(movie) routerLink="/addmovie">Book Show</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

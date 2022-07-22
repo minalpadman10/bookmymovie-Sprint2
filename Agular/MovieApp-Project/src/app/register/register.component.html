@@ -1,0 +1,66 @@
+<div class="container pt-3 border-0 mx-auto bg-light"  style=" box-shadow: 5px 5px 12px black; width:100%; height: 450px; border-radius: 7px;margin-top:20px; margin-bottom: 20px;">
+    <div class="row">
+        <div class="col-6">
+            <img src="../../assets/reg_img2.avif" height="425px" width="400px">
+        </div>
+        <div class="col-6" style="margin-left:-100px;">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card rounded-0 border-0 bg-light">
+                        <div class="Card-header">
+                            <h2 class="mb-0 mb-3 login">Register Here</h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="form">
+                                <div class="row pt-3">
+                                    <div class="col-10">
+                                        <label class="form-label u_name" for="floatingPassword">First Name</label>  
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="text" class="form-control box_input" id="floatingtext" [(ngModel)]="registerUserData.FirstName" placeholder="Enter Your First Name">
+                                    </div>
+                                </div>
+                                <div class="row pt-3">
+                                    <div class="col-10">
+                                        <label class="form-label u_name" for="floatingPassword">Last Name</label>  
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="text" class="form-control box_input" id="floatingtext" [(ngModel)]="registerUserData.LastName" placeholder="Enter Your Last Name">
+                                    </div>
+                                </div>
+                                <div class="row pt-3">
+                                    <div class="col-10">
+                                        <label class="form-label u_name" for="floatingInput">Email Id</label>  
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="email" class="form-control box_input" id="floatingInput" [(ngModel)]="registerUserData.userName" placeholder="Please enter your email">  
+                                    </div>
+                                </div>
+                                <div class="row pt-3">
+                                    <div class="col-10">
+                                        <label class="form-label u_name" for="floatingPassword">Password</label>  
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="password" class="form-control box_input" id="floatingPassword" [(ngModel)]="registerUserData.password" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="row pt-3">
+                                    <div class="col-10">
+                                        <label class="form-label u_name" for="floatingPassword">Mobile Number</label>  
+                                    </div>
+                                    <div class="col-2">
+                                        <input type="tel" class="form-control box_input" id="floatingNumber" [(ngModel)]="registerUserData.MobileNumber" placeholder="Mobile Number">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check"></div>
+                                    </div>
+                                <button class="btn btn-log" (click)="registerUser()" type="submit">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

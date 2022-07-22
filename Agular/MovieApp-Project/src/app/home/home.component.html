@@ -1,0 +1,43 @@
+<div class="container-fluid"> 
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../assets/bannerr.webp" class="d-block" style="padding: 0;" width="100%" height="300px" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/same.avif" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../assets/1.avif" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</div>
+
+
+
+
+
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let movie of movies">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/{{movie.movieImage}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{movie.movieName}}</h5>
+                
+                <a href="#" class="btn btn-primary" routerLink="/login">Book Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="file"  #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none"/>
+      <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>

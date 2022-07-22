@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="box-shadow: 10px 5px 15px black; margin-bottom: 6px;padding: 20px;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <a class="navbar-brand" routerLink="/home" style="font-size:30px;font-weight:600; ">Book<em style="color:red;">My</em>Movie</a>
+      </div>
+      <div class="col-6">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active nav_style" aria-current="page" routerLink="/home" style="color:black !important;font-weight:900px !important;font-size: 20px;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_style ml-2" *ngIf="LoggedIn(false)" routerLink="/login"  style="color:black !important;font-weight:900px !important;font-size: 20px;margin-left: 20px;">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_style"  *ngIf="LoggedIn(false)" routerLink="/register"  style="color:black !important;font-weight:900px !important;font-size: 20px; margin-left: 20px;">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_style"  *ngIf="LoggedIn(true)" routerLink="/account"  style="color:black !important;font-weight:900px !important;font-size: 18px; margin-left: 40px !important;">My Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav_style"  *ngIf="LoggedIn(true)" (click)="LogOut()"  style="color:black !important;font-weight:900px !important;font-size: 20px; margin-left: 20px;">Logout</a>
+            </li>
+         </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="btn circle" routerLink="/addmovie">
+    <i class="fa fa-user-circle-o" style="font-size:40px"></i>
+    <div class="total"> {{totalItem}}</div>
+</button>
+</nav>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
